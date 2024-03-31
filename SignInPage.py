@@ -18,3 +18,12 @@ password_entry.grid(row=1, column=1, padx=5, pady=5)
 
 login_button = tk.Button(root, text="Login", command=handle_login)
 login_button.grid(row=2, columnspan=2, padx=5, pady=5)
+
+login_success_label = tk.Label(root, text="", fg="green")
+login_success_label.grid(row=3, columnspan=2, padx=5, pady=5)
+
+# Run the application
+root.mainloop()
+
+# Close database connection when application exits
+conn.close()
