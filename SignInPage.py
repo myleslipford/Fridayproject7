@@ -10,6 +10,18 @@ def check_credentials(email, password):
     cursor.execute('SELECT * FROM users WHERE email=? AND password=?', (email, password))
     return cursor.fetchone() is not None
 
+def handle_login():
+    email = email_entry.get()
+    password = password_entry.get()
+
+    if check_credentials(email, password):
+        messagebox.showinfo("Login Successful", "Login Successful")
+        login_success_label.config(text="Login Successful", fg="green")
+    else:
+        messagebox.showerror("Login Failed", "Email or password incorrect")
+        login_success_label.config(text="Email or password incorrect", fg="red")
+
+
 root = tk.Tk()
 root.title("Sign In")
 
