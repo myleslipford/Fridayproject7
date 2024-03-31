@@ -49,4 +49,7 @@ confirm_password_label.grid(row=2, column=0, padx=5, pady=5, sticky="w")
 confirm_password_entry = tk.Entry(root, show="*")
 confirm_password_entry.grid(row=2, column=1, padx=5, pady=5)
 
+submit_button = tk.Button(root, text="Sign Up", command=submit_signup)
+submit_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
+
 root.mainloop()
