@@ -15,3 +15,6 @@ password_label = tk.Label(root, text="Password:")
 password_label.grid(row=1, column=0, padx=5, pady=5, sticky=tk.E)
 password_entry = tk.Entry(root, show="*")
 password_entry.grid(row=1, column=1, padx=5, pady=5)
+
+login_button = tk.Button(root, text="Login", command=handle_login)
+login_button.grid(row=2, columnspan=2, padx=5, pady=5)
