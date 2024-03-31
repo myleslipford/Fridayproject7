@@ -15,3 +15,17 @@ def submit_signup():
         messagebox.showerror("Error", "Invalid email format. Please enter a valid email address.")
         return
     
+    try:
+        conn = sqlite3.connect('users.db')
+        cursor = conn.cursor()
+        cursor.execute('CREATE TABLE IF NOT EXISTS users (email TEXT, password TEXT)')
+        cursor.execute('INSERT INTO users (email, password) VALUES (?, ?)', (email, password))
+        conn.commit()
+        conn.close()
+        messagebox.showinfo("Success", "Sign up successful. You can now login.")
+    except sqlite3.Error as e:
+        print("SQLite error:", e)
+        messagebox.showerror("Error", "An error occurred while signing up. Please try again later.")
+
+
+root.mainloop()
