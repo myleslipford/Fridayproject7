@@ -39,4 +39,9 @@ email_label.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 email_entry = tk.Entry(root)
 email_entry.grid(row=0, column=1, padx=5, pady=5)
 
+password_label = tk.Label(root, text="Password:")
+password_label.grid(row=1, column=0, padx=5, pady=5, sticky="w")
+password_entry = tk.Entry(root, show="*")
+password_entry.grid(row=1, column=1, padx=5, pady=5)
+
 root.mainloop()
