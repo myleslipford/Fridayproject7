@@ -27,5 +27,8 @@ def submit_signup():
         print("SQLite error:", e)
         messagebox.showerror("Error", "An error occurred while signing up. Please try again later.")
 
+def is_valid_email(email):
+    # Very basic email validation, just checking for "@" and a domain
+    return '@' in email and '.' in email.split('@')[-1]
 
 root.mainloop()
