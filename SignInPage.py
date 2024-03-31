@@ -3,7 +3,7 @@ from tkinter import messagebox
 import sqlite3
 
 
-conn = sqlite3.connect('users.db')
+conn = sqlite3.connect('usersinfo.db')
 cursor = conn.cursor()
 
 def check_credentials(email, password):

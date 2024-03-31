@@ -16,7 +16,7 @@ def submit_signup():
         return
     
     try:
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('usersinfo.db')
         cursor = conn.cursor()
         cursor.execute('CREATE TABLE IF NOT EXISTS users (email TEXT, password TEXT)')
         cursor.execute('INSERT INTO users (email, password) VALUES (?, ?)', (email, password))
