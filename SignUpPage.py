@@ -44,4 +44,9 @@ password_label.grid(row=1, column=0, padx=5, pady=5, sticky="w")
 password_entry = tk.Entry(root, show="*")
 password_entry.grid(row=1, column=1, padx=5, pady=5)
 
+confirm_password_label = tk.Label(root, text="Confirm Password:")
+confirm_password_label.grid(row=2, column=0, padx=5, pady=5, sticky="w")
+confirm_password_entry = tk.Entry(root, show="*")
+confirm_password_entry.grid(row=2, column=1, padx=5, pady=5)
+
 root.mainloop()
