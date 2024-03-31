@@ -31,4 +31,7 @@ def is_valid_email(email):
     # Very basic email validation, just checking for "@" and a domain
     return '@' in email and '.' in email.split('@')[-1]
 
+root = tk.Tk()
+root.title("Sign Up")
+
 root.mainloop()
