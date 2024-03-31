@@ -3,6 +3,11 @@ from tkinter import messagebox
 import sqlite3
 
 
+conn = sqlite3.connect('users.db')
+cursor = conn.cursor()
+
+
+
 root = tk.Tk()
 root.title("Sign In")
 
