@@ -6,7 +6,9 @@ import sqlite3
 conn = sqlite3.connect('users.db')
 cursor = conn.cursor()
 
-
+def check_credentials(email, password):
+    cursor.execute('SELECT * FROM users WHERE email=? AND password=?', (email, password))
+    return cursor.fetchone() is not None
 
 root = tk.Tk()
 root.title("Sign In")
